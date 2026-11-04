@@ -6,7 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E068D8FC309AD25900AF2F08 /* SubjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E068D8FB309AD25900AF2F08 /* SubjectsViewController.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		E068D8FB309AD25900AF2F08 /* SubjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsViewController.swift; sourceTree = "<group>"; };
 		E093418030918843004E5B99 /* StudentOrganizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentOrganizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -45,6 +50,7 @@
 		E093417730918843004E5B99 = {
 			isa = PBXGroup;
 			children = (
+				E068D8FB309AD25900AF2F08 /* SubjectsViewController.swift */,
 				E093418230918843004E5B99 /* StudentOrganizer */,
 				E093418130918843004E5B99 /* Products */,
 			);
@@ -132,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E068D8FC309AD25900AF2F08 /* SubjectsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
