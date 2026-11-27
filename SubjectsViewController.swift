@@ -38,30 +38,32 @@ class SubjectsViewController: UITableViewController {
     // MARK: - Actions
     @IBAction func addSubjectTapped(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "New Subject",
-                                      message: "Enter the name of the subject.",
-                                      preferredStyle: .alert)
-        alert.addTextField { textField in
-            textField.placeholder = "e.g., Mobile Application Development 2"
-            textField.autocapitalizationType = .words
-        }
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        let saveAction = UIAlertAction(title: "Save", style: .default) {
-            [weak self, weak alert] _ in
-            // guard: stop quietly if the name is empty (never force-unwrap user input)
-            guard let self = self,
-                  let name = alert?.textFields?.first?.text?
-                      .trimmingCharacters(in: .whitespacesAndNewlines),
-                  !name.isEmpty else { return }
- 
-            let subject = Subject(context: self.context)   // create a new row
-            subject.name = name
-            subject.createdAt = Date()
-            CoreDataStack.shared.save()                    // write it to the database
-            self.loadSubjects()
-        }
-        alert.addAction(saveAction)
-        present(alert, animated: true)
-    }
+                                              message: "Enter the name of the subject.",
+                                              preferredStyle: .alert)
+                alert.addTextField { textField in
+                    textField.placeholder = "e.g., Mobile Application Development 2"
+                    textField.autocapitalizationType = .words
+                }
+                alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+                let saveAction = UIAlertAction(title: "Save", style: .default) {
+                    [weak self, weak alert] _ in
+                    // guard: stop quietly if the name is empty (never force-unwrap user input)
+                    guard let self = self,
+                          let name = alert?.textFields?.first?.text?
+                              .trimmingCharacters(in: .whitespacesAndNewlines),
+                          !name.isEmpty else { return }
+         
+                    let subject = Subject(context: self.context)   // create a new row
+                    subject.name = name
+                    subject.createdAt = Date()
+                    CoreDataStack.shared.save()                    // write it to the database
+                    self.loadSubjects()
+                }
+                alert.addAction(saveAction)
+                present(alert, animated: true)
+            }
+         
+
  
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView,

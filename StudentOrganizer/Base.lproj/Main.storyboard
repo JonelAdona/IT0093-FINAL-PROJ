@@ -122,6 +122,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="BHG-dM-Py0" kind="show" identifier="ShowTaskFormSegue" id="JlB-9t-8xD"/>
+                        <segue destination="cGy-RZ-7fs" kind="show" identifier="ShowNotesSegue" id="cC0-Oz-8pp"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVd-Gl-sh4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -219,7 +220,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="J7X-5i-JNL">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="oiG-Lx-f8y"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="oiG-Lx-f8y">
+                            <connections>
+                                <action selector="saveTapped:" destination="BHG-dM-Py0" id="Msk-EY-u7y"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -228,7 +233,6 @@
                         <outlet property="dueDatePicker" destination="4av-S4-04j" id="A2F-4N-Cpw"/>
                         <outlet property="prioritySegmentedControl" destination="7PQ-2Z-cBB" id="zMQ-fl-XJO"/>
                         <outlet property="titleTextField" destination="3mC-tg-LBo" id="hXh-u4-jTe"/>
-                        <segue destination="cGy-RZ-7fs" kind="show" identifier="ShowNotesSegue" id="c02-EJ-4sh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w3X-7O-Z9L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
