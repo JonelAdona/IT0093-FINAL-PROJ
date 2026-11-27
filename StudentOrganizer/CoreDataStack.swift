@@ -1,4 +1,4 @@
-import CoreData
+internal import CoreData
  
 /// One shared object that owns the Core Data "stack" (model + database + context).
 /// Every screen talks to the database through CoreDataStack.shared.
